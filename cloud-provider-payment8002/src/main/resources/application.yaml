@@ -1,0 +1,23 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name:cloud-provider-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.100.232.217:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&requireSSL=false
+    username: root
+    password: liu123
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+
+mybatis:
+  mapper-locations: classpath:**/*.xml
+  type-aliases-package: com.atguigu.springcloud.entity
